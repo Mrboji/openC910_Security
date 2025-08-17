@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-`include "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/logical/aes_ip/aes_define.vh"
+`include "/home/chipyard/openC910/c910_soc_sim/smart_run/logical/aes_ip/aes_define.vh"
 
 module AES_IP_top
     #(

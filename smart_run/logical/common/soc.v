@@ -692,7 +692,7 @@ ahb  x_ahb (
 
 `define APB_BASE_ADDR       40'hb0000000
 apb  x_apb (
-  //.b_pad_gpio_porta (b_pad_gpio_porta),
+  .b_pad_gpio_porta (b_pad_gpio_porta),
   .biu_pad_haddr    (haddr_dly       ),
   .biu_pad_hprot    (biu_pad_hprot   ),
   .biu_pad_lpmd_b   (biu_pad_lpmd_b  ),

@@ -15,7 +15,7 @@
 
 #!/bin/csh
 
-setenv TOOL_EXTENSION /home/yuhao/ProgramFiles/RISC-V/xuantie_toolchain/Xuantie-900-gcc-elf-newlib-x86_64-V2.6.1/bin
+setenv TOOL_EXTENSION /home/chipyard/EDA_tools/Xuantie-900-gcc-elf-newlib-x86_64-V2.6.1/bin
 echo 'Toolchain path($TOOL_EXTENSION):'
 echo "    $TOOL_EXTENSION"
 

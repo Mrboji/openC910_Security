@@ -19,9 +19,9 @@ include ./setup/env_check.mk
 ################################################################################
 # Simulation related
 ################################################################################
-SIM = vcs
+SIM = verilator
 DUMP = off
-THREADS = 10
+THREADS = 1
 
 # Generate C++ in executable form
 VERILATOR_FLAGS += -cc --exe
@@ -105,7 +105,7 @@ else
           SIMULATOR_LOG := 
         else
             ifeq ($(SIM), verilator)
-              SIMULATOR_OPT := -Os -x-assign 0 -Wno-fatal --threads ${THREADS}
+              SIMULATOR_OPT := -Os -x-assign 0 -Wno-fatal --threads ${THREADS} --no-timing
               SIMULATOR_DEF := -cc --exe --top-module top 
               SIMULATOR_LOG := 
             else
@@ -123,6 +123,9 @@ else
     SIM_FILELIST := $(SIM_FILELIST) -f ../logical/filelists/sim.fl
     endif
 endif
+
+env_init:
+	csh -c "source setup/setup.csh;bash"
 
 compile:
 	@echo "  [THead-smart] Compiling smart now ... "
@@ -148,7 +151,7 @@ endif
 
 buildVerilator:
 	@cp ./logical/tb/Makefile_obj ./work/Makefile_obj
-	@cd ./work && make -j -C obj_dir -f ../Makefile_obj
+	@cd ./work && make  -C obj_dir -f ../Makefile_obj
 cleansim:
 	@cd ./work && rm -rf simv* csrc ucli.key *.vcs.log novas_dump.log *.fsdb
 cleanVerilator:

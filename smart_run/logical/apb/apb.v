@@ -14,7 +14,7 @@ limitations under the License.
 */
 
 module apb(
-  //b_pad_gpio_porta,
+  b_pad_gpio_porta,
   biu_pad_haddr,
   biu_pad_hprot,
   biu_pad_lpmd_b,
@@ -80,10 +80,10 @@ output           pmu_cpu_restore;
 `endif
 output           uart0_sout;       
 output  [39 :0]  xx_intc_vld;      
-//inout   [7  :0]  b_pad_gpio_porta; 
+inout   [7  :0]  b_pad_gpio_porta; 
 
 wire             apb_clkgen_psel;  
-//wire             apb_gpio_psel;    
+wire             apb_gpio_psel;    
 wire    [39 :0]  apb_haddr;        
 wire    [2  :0]  apb_hburst;       
 wire    [31 :0]  apb_hrdata;       
@@ -105,14 +105,14 @@ wire    [39 :0]  apb_xx_paddr;
 wire             apb_xx_penable;   
 wire    [31 :0]  apb_xx_pwdata;    
 wire             apb_xx_pwrite;    
-//wire    [7  :0]  b_pad_gpio_porta; 
+wire    [7  :0]  b_pad_gpio_porta; 
 wire    [39 :0]  biu_pad_haddr;    
 wire    [3  :0]  biu_pad_hprot;    
 wire    [1  :0]  biu_pad_lpmd_b;   
 wire             clk_en;           
 wire    [31 :0]  clkgen_apb_prdata; 
-// wire    [31 :0]  gpio_apb_prdata;  
-// wire    [7  :0]  gpio_intc_int;    
+wire    [31 :0]  gpio_apb_prdata;  
+wire    [7  :0]  gpio_intc_int;    
 wire    [39 :0]  haddr_s2;         
 wire    [2  :0]  hburst_s2;        
 wire             hmastlock;        
@@ -195,17 +195,17 @@ apb_bridge  x_apb_bridge (
   .prdata_s1         (uart_apb_prdata  ),
   .prdata_s2         (tim_apb_prdata   ),
   .prdata_s3         (pmu_apb_prdata   ),
-  .prdata_s4         (32'h0            ),
-  //.prdata_s5         (gpio_apb_prdata  ),
-  .prdata_s5         (32'b0  ),
+  .prdata_s4         (           ),
+  .prdata_s5         (gpio_apb_prdata  ),
+  // .prdata_s5         (32'b0  ),
   .prdata_s6         (clkgen_apb_prdata),
   .prdata_s7         (stim_apb_prdata  ),
   .psel_s1           (apb_uart_psel    ),
   .psel_s2           (apb_tim_psel     ),
   .psel_s3           (apb_pmu_psel     ),
   .psel_s4           (apb_intc_psel    ),
-  //.psel_s5           (apb_gpio_psel    ),
-  .psel_s5           (1'b0    ),
+  .psel_s5           (apb_gpio_psel    ),
+  // .psel_s5           (1'b0    ),
   .psel_s6           (apb_clkgen_psel  ),
   .psel_s7           (apb_stim_psel    )
 );
@@ -237,19 +237,19 @@ timer  x_timer (
 );
 
 
-// gpio  x_gpio (
-//   .b_pad_gpio_porta  (b_pad_gpio_porta ),
-//   .gpio_intr         (gpio_intc_int    ),
-//   .paddr             (apb_xx_paddr[6:2]),
-//   .pclk              (per_clk          ),
-//   .pclk_intr         (per_clk          ),
-//   .penable           (apb_xx_penable   ),
-//   .prdata            (gpio_apb_prdata  ),
-//   .presetn           (pad_cpu_rst_b    ),
-//   .psel              (apb_gpio_psel    ),
-//   .pwdata            (apb_xx_pwdata    ),
-//   .pwrite            (apb_xx_pwrite    )
-// );
+gpio  x_gpio (
+  .b_pad_gpio_porta  (b_pad_gpio_porta ),
+  .gpio_intr         (gpio_intc_int    ),
+  .paddr             (apb_xx_paddr[6:2]),
+  .pclk              (per_clk          ),
+  .pclk_intr         (per_clk          ),
+  .penable           (apb_xx_penable   ),
+  .prdata            (gpio_apb_prdata  ),
+  .presetn           (pad_cpu_rst_b    ),
+  .psel              (apb_gpio_psel    ),
+  .pwdata            (apb_xx_pwdata    ),
+  .pwrite            (apb_xx_pwrite    )
+);
 
 timer  x_stimer (
   .paddr              (apb_xx_paddr[15:0]),
