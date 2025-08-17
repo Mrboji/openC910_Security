@@ -1,0 +1,482 @@
+debImport "-full64"
+wvConvertFile -o \
+           "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/work/test.fsdb.fsdb" \
+           "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/work/test.fsdb"
+debLoadSimResult \
+           /home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/work/test.fsdb.fsdb
+wvRestoreSignal -win $_nWave2 \
+           "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/signal.rc" \
+           -overWriteAutoAlias on -appendSignals on
+wvScrollDown -win $_nWave2 7
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface"
+wvSetPosition -win $_nWave2 {("G4" 11)}
+wvSetPosition -win $_nWave2 {("G4" 12)}
+wvSetPosition -win $_nWave2 {("G5" 0)}
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvSetPosition -win $_nWave2 {("G6" 1)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G7" 6)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_ARADDR\[39:0\]"
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G6" 1)}
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G6" 3)}
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_ARID\[7:0\]"
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G6" 3)}
+wvSetPosition -win $_nWave2 {("G6" 4)}
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G7" 6)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 2)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_ARREADY"
+wvSetPosition -win $_nWave2 {("G8" 2)}
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvSetPosition -win $_nWave2 {("G6" 3)}
+wvSetPosition -win $_nWave2 {("G6" 4)}
+wvSetPosition -win $_nWave2 {("G6" 6)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G7" 6)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_ARVALID"
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvSetPosition -win $_nWave2 {("G8" 4)}
+wvSetCursor -win $_nWave2 9248945630.247202 -snap {("G8" 2)}
+wvSetCursor -win $_nWave2 9249141946.094822 -snap {("G8" 3)}
+wvSetCursor -win $_nWave2 9250852698.481228 -snap {("G8" 1)}
+wvGetSignalOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 4)}
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvSetPosition -win $_nWave2 {("G8" 4)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_RID\[7:0\]"
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G9" 1)}
+wvSetPosition -win $_nWave2 {("G9" 1)}
+wvSetCursor -win $_nWave2 9249159792.990061 -snap {("G8" 4)}
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 4)}
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvSetPosition -win $_nWave2 {("G8" 2)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G7" 6)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G6" 3)}
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G6" 1)}
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvSetPosition -win $_nWave2 {("G5" 1)}
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvSetPosition -win $_nWave2 {("G6" 1)}
+wvSetCursor -win $_nWave2 9251408501.790075 -snap {("G7" 0)}
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvSetCursor -win $_nWave2 9249231180.571012 -snap {("G4" 1)}
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 8
+wvScrollUp -win $_nWave2 1
+wvSetCursor -win $_nWave2 9249136846.981897 -snap {("G8" 4)}
+wvSetCursor -win $_nWave2 9249039963.836319 -snap {("G7" 7)}
+wvSetCursor -win $_nWave2 9249147045.207748 -snap {("G8" 4)}
+wvSetCursor -win $_nWave2 9248943080.690739 -snap {("G8" 4)}
+wvSetCursor -win $_nWave2 9249134297.425434 -snap {("G8" 4)}
+wvSelectSignal -win $_nWave2 {( "G6" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G7" 6 )} 
+wvSetCursor -win $_nWave2 9249955254.606392 -snap {("G6" 7)}
+wvSetCursor -win $_nWave2 9249162342.546524 -snap {("G6" 7)}
+wvGetSignalOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G7" 6)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G6" 3)}
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvSetPosition -win $_nWave2 {("G8" 4)}
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvSetPosition -win $_nWave2 {("G8" 2)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_ARBURST\[1:0\]" \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_ARLEN\[7:0\]"
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvScrollDown -win $_nWave2 1
+wvSetPosition -win $_nWave2 {("G8" 2)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G7" 6)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvScrollDown -win $_nWave2 1
+wvSelectSignal -win $_nWave2 {( "G8" 1 )} 
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 9)}
+wvSetPosition -win $_nWave2 {("G7" 8)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSelectSignal -win $_nWave2 {( "G8" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G8" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G8" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G8" 3 )} 
+wvSetPosition -win $_nWave2 {("G8" 3)}
+wvSetPosition -win $_nWave2 {("G8" 2)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 10)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G7" 10)}
+wvSetPosition -win $_nWave2 {("G7" 11)}
+wvSelectSignal -win $_nWave2 {( "G8" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G8" 2 )} 
+wvSetPosition -win $_nWave2 {("G8" 2)}
+wvSetPosition -win $_nWave2 {("G8" 1)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 11)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G7" 11)}
+wvSetPosition -win $_nWave2 {("G7" 12)}
+wvSelectSignal -win $_nWave2 {( "G8" 1 )} 
+wvSelectGroup -win $_nWave2 {G8}
+wvSelectSignal -win $_nWave2 {( "G8" 1 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G7" 12)}
+wvSelectSignal -win $_nWave2 {( "G7" 10 )} 
+wvSelectSignal -win $_nWave2 {( "G7" 12 )} 
+wvSelectSignal -win $_nWave2 {( "G7" 10 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 7 )} 
+wvSelectGroup -win $_nWave2 {G7}
+wvSelectSignal -win $_nWave2 {( "G6" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 6 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 12)}
+wvSelectSignal -win $_nWave2 {( "G6" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 1 )} 
+wvGetSignalOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 0)}
+wvSetPosition -win $_nWave2 {("G6" 1)}
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G7" 12)}
+wvSetPosition -win $_nWave2 {("G6" 3)}
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G6" 1)}
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G6" 3)}
+wvSetPosition -win $_nWave2 {("G7" 12)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 12)}
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G6" 4)}
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G6" 6)}
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_RREADY"
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSelectSignal -win $_nWave2 {( "G7" 9 )} 
+wvSetCursor -win $_nWave2 9249050162.062168 -snap {("G7" 9)}
+wvSetCursor -win $_nWave2 9249147045.207748 -snap {("G7" 11)}
+wvGetSignalOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G7" 11)}
+wvSetPosition -win $_nWave2 {("G10" 0)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 12)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G7" 11)}
+wvSetPosition -win $_nWave2 {("G9" 0)}
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/axi_arlen\[7:0\]" \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/axi_arlen_cntr\[7:0\]"
+wvSetPosition -win $_nWave2 {("G8" 0)}
+wvSetPosition -win $_nWave2 {("G8" 2)}
+wvSetCursor -win $_nWave2 9249256676.135639 -snap {("G6" 7)}
+wvSetCursor -win $_nWave2 9249353559.281218 -snap {("G6" 7)}
+wvSetCursor -win $_nWave2 9249447892.870335 -snap {("G6" 7)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G7" 7 )} 
+wvSetCursor -win $_nWave2 9249148319.985905 -snap {("G7" 12)}
+wvSetCursor -win $_nWave2 9249612339.262098 -snap {("G7" 12)}
+wvSetCursor -win $_nWave2 9249459365.874342 -snap {("G6" 7)}
+wvSelectSignal -win $_nWave2 {( "G7" 10 )} 
+wvZoomIn -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G8" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G8" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G6" 7 )} 
+wvGetSignalOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 4)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 6)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G7" 11)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/axi_rvalid"
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSetCursor -win $_nWave2 9249662055.613192 -snap {("G7" 1)}
+wvSetCursor -win $_nWave2 9249473388.434959 -snap {("G7" 1)}
+wvSelectSignal -win $_nWave2 {( "G8" 1 )} 
+wvScrollDown -win $_nWave2 2
+wvSelectSignal -win $_nWave2 {( "G8" 2 )} 
+wvGetSignalOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G7" 10)}
+wvSetPosition -win $_nWave2 {("G7" 12)}
+wvSetPosition -win $_nWave2 {("G7" 11)}
+wvSetPosition -win $_nWave2 {("G7" 10)}
+wvSetPosition -win $_nWave2 {("G7" 9)}
+wvSetPosition -win $_nWave2 {("G7" 8)}
+wvSetPosition -win $_nWave2 {("G7" 7)}
+wvSetPosition -win $_nWave2 {("G7" 6)}
+wvSetPosition -win $_nWave2 {("G7" 5)}
+wvSetPosition -win $_nWave2 {("G7" 4)}
+wvSetPosition -win $_nWave2 {("G7" 3)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G7" 10)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_RLAST"
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvSetPosition -win $_nWave2 {("G6" 10)}
+wvSetCursor -win $_nWave2 9249149594.764210 -snap {("G6" 10)}
+wvSetCursor -win $_nWave2 9249024666.497543 -snap {("G8" 2)}
+wvSetCursor -win $_nWave2 1240069.435043 -snap {("G8" 1)}
+wvZoomOut -win $_nWave2
+wvUndo -win $_nWave2
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvGetSignalOpen -win $_nWave2
+wvSetPosition -win $_nWave2 {("G6" 2)}
+wvSetPosition -win $_nWave2 {("G6" 4)}
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G7" 10)}
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvAddSignal -win $_nWave2 \
+           "/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_RLAST"
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvSetPosition -win $_nWave2 {("G6" 10)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomAll -win $_nWave2
+wvSetCursor -win $_nWave2 9643512347.803070 -snap {("G7" 11)}
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSetCursor -win $_nWave2 9249641918.495544 -snap {("G7" 2)}
+wvSetCursor -win $_nWave2 9249142832.035772 -snap {("G7" 12)}
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb/x_soc"
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvSetPosition -win $_nWave2 {("G6" 10)}
+wvSetPosition -win $_nWave2 {("G7" 9)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G7" 9)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 2)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvAddSignal -win $_nWave2 "/tb/x_soc/cpu_clk"
+wvSetPosition -win $_nWave2 {("G7" 0)}
+wvSetPosition -win $_nWave2 {("G7" 1)}
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSetCursor -win $_nWave2 9249247430.994408 -snap {("G6" 8)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G6" 9 )} 
+wvSaveSignal -win $_nWave2 \
+           "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/signal.rc"
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/tb/x_soc/x_axi_interconnect"
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvSetPosition -win $_nWave2 {("G6" 10)}
+wvSetPosition -win $_nWave2 {("G7" 9)}
+wvSetPosition -win $_nWave2 {("G6" 10)}
+wvSetPosition -win $_nWave2 {("G6" 9)}
+wvSetPosition -win $_nWave2 {("G6" 8)}
+wvSetPosition -win $_nWave2 {("G6" 7)}
+wvSetPosition -win $_nWave2 {("G6" 6)}
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G6" 4)}
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvAddSignal -win $_nWave2 "/tb/x_soc/x_axi_interconnect/rready" \
+           "/tb/x_soc/x_axi_interconnect/rready_s0" \
+           "/tb/x_soc/x_axi_interconnect/rready_s1" \
+           "/tb/x_soc/x_axi_interconnect/rready_s2" \
+           "/tb/x_soc/x_axi_interconnect/rready_s3"
+wvSetPosition -win $_nWave2 {("G6" 5)}
+wvSetPosition -win $_nWave2 {("G6" 10)}
+wvSetCursor -win $_nWave2 9262029124.885746 -snap {("G6" 10)}
+wvSetCursor -win $_nWave2 9271066474.911800 -snap {("G6" 9)}
+wvSetCursor -win $_nWave2 9277004223.171383
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 9248783310.471729 -snap {("G7" 9)}
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSetCursor -win $_nWave2 9249266258.806953 -snap {("G6" 15)}
+wvZoomIn -win $_nWave2

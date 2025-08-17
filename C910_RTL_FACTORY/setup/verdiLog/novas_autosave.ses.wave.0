@@ -1,0 +1,172 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 2408 1031 243 250
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/test.fsdb" "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/test.fsdb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 20696566500.000000
+cursor 20469450000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 59
+
+; logical expression list
+; addExprSig expr_name expression_string
+activeDirFile "" "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/test.fsdb.fsdb"
+
+addExprSig -b 1 -n U logical_expression_1 "/tb/x_soc/biu_pad_araddr[39:0]"=='h20000310
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/biu_araddr==read_aes_out" "/logical_expression_1" keep
+
+; logical expression list
+; addExprSig expr_name expression_string
+
+addExprSig -b 1 -n U aes_araddr==read_aes_out "/tb/x_soc/x_AES_IP_top/s00_axi_araddr[39:0]"==20000310
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/test.fsdb.fsdb"
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/s00_axi_awaddr[39:0]
+addSignal -h 15 -holdScope s00_axi_wdata[127:0]
+addSignal -h 15 -holdScope IV[127:0]
+addSignal -h 15 -holdScope input_text[127:0]
+addSignal -h 15 -holdScope key[127:0]
+addSignal -h 15 -holdScope mode_of_ecb_or_cbc
+addSignal -h 15 -holdScope mode_of_enc_or_dec
+addSignal -h 15 -holdScope start
+addGroup "G2"
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/done
+addSignal -h 15 -holdScope output_text[127:0]
+addSignal -h 15 -UNSIGNED -HEX /tb/x_soc/biu_pad_araddr[39:0]
+addSignal -h 15 -UNSIGNED -HEX /tb/x_soc/x_AES_IP_top/s00_axi_araddr[39:0]
+addSignal -h 15 -UNSIGNED -HEX /tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/axi_rdata[127:0]
+addSignal -h 15 /tb/x_soc/pad_biu_rdata[127:0]
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/s00_axi_rdata[127:0]
+addSignal -h 15 /biu_araddr==read_aes_out
+addSignal -h 15 -holdScope aes_araddr==read_aes_out
+addGroup "G3"
+addSignal -h 15 /tb/x_soc/x_apb/x_uart/x_uart_apb_reg/sys_clk
+addSignal -h 15 -holdScope apb_uart_paddr[39:0]
+addSignal -h 15 -holdScope apb_uart_psel
+addSignal -h 15 -holdScope apb_uart_pwrite
+addSignal -h 15 -holdScope apb_uart_pwdata[31:0]
+addSignal -h 15 -holdScope uart_reg_data[7:0]
+addSignal -h 15 -holdScope uart_apb_prdata[31:0]
+addSignal -h 15 -holdScope uart_thr_wen
+addSignal -h 15 -holdScope wr_acc
+addSignal -h 15 -UNSIGNED -ASC -holdScope uart_thr[7:0]
+addSignal -h 15 -holdScope ctrl_reg_thr_read
+addSignal -h 15 -holdScope uart_lsr_thre
+addGroup "G4"
+addSignal -h 15 /tb/x_soc/x_axi_interconnect/rdata[127:0]
+addSignal -h 15 -holdScope rready
+addSignal -h 15 -holdScope rvalid
+addSignal -h 15 -holdScope rsel0
+addSignal -h 15 -holdScope rsel1
+addSignal -h 15 -holdScope rsel2
+addSignal -h 15 -holdScope rsel3
+addSignal -h 15 -holdScope read_done0
+addSignal -h 15 -holdScope read_done1
+addSignal -h 15 -holdScope read_done2
+addSignal -h 15 -holdScope read_done3
+addSignal -h 15 -holdScope rdata_s2[127:0]
+addGroup "G5"
+addSignal -h 15 /tb/x_soc/x_apb/x_ahb2apb/latch_haddr[39:0]
+addGroup "G6"
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_RID[7:0]
+addSignal -h 15 /tb/x_soc/x_axi_interconnect/rvalid_s0
+addSignal -h 15 -holdScope rvalid_s1
+addSignal -h 15 -holdScope rvalid_s2
+addSignal -h 15 -holdScope rvalid_s3
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_RVALID
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/s00_axi_rvalid
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/axi_rvalid
+addSignal -h 15 -holdScope S_AXI_RREADY
+addSignal -h 15 -holdScope S_AXI_RLAST
+addGroup "G7"
+addSignal -h 15 /tb/x_soc/cpu_clk
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/S_AXI_ACLK
+addSignal -h 15 -holdScope S_AXI_ARBURST[1:0]
+addSignal -h 15 -holdScope S_AXI_ARLEN[7:0]
+addSignal -h 15 -holdScope S_AXI_ARID[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S_AXI_ARADDR[39:0]
+addSignal -h 15 -holdScope S_AXI_ARBURST[1:0]
+addSignal -h 15 -holdScope S_AXI_ARLEN[7:0]
+addSignal -h 15 -holdScope S_AXI_ARREADY
+addSignal -h 15 -holdScope axi_araddr[39:0]
+addSignal -h 15 -holdScope axi_arv_arr_flag
+addSignal -h 15 -holdScope S_AXI_ARVALID
+addSignal -h 15 -holdScope S_AXI_ARREADY
+addGroup "G8"
+addSignal -h 15 /tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface/axi_arlen[7:0]
+addSignal -h 15 -holdScope axi_arlen_cntr[7:0]
+addGroup "G9"
+addGroup "G10"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/test.fsdb.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/ct_spsram_64x108"
+"/tb"
+"/tb/x_soc"
+"/tb/x_soc/x_AES_IP_top"
+"/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface"
+"/tb/x_soc/x_apb"
+"/tb/x_soc/x_apb/x_uart"
+
+SCOPE_LIST_BEGIN
+"/ct_spsram_64x108"
+"/tb/x_soc/x_AES_IP_top"
+"/tb/x_soc/x_AES_IP_top/u_AES_IP_AXI_interface"
+"/tb"
+"/tb/x_soc"
+"/tb/x_soc/x_apb/x_uart/x_uart_apb_reg"
+"/tb/x_soc/x_axi_interconnect"
+"/tb/x_soc/x_axi2ahb"
+"/tb/x_soc/x_apb/x_ahb2apb"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

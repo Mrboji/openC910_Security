@@ -1,0 +1,3 @@
+Command Line: /home/yuhao/ProgramFiles/IC_EDA/verdi/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/vfast -silent -del . -o /home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/test.fsdb.fsdb -ft verilog /home/yuhao/ProgramFiles/Research/RISC-V/XUANTIE/lab/openc910-main-fpga-aes/smart_run/verdi/test.fsdb
+uname(Linux yuhao-Legion-Y9000P-IAH7H 5.19.0-46-generic #47~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jun 21 15:35:31 UTC 2 x86_64)
+au time 38.884690 37.297267 0.529961 delta 170434560 170434560 total 205266944 205266944
