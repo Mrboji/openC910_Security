@@ -20,7 +20,7 @@ include ./setup/env_check.mk
 # Simulation related
 ################################################################################
 SIM = vcs
-DUMP = on
+DUMP = o
 THREADS = 10
 
 # Generate C++ in executable form
