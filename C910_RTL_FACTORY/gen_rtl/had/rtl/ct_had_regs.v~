@@ -547,7 +547,7 @@ assign event_ie_reg[31:0] = {30'b0, event_exit_ie, event_ent_ie};
 always @(posedge cpuclk or negedge cpurst_b)
 begin
   if (!cpurst_b)
-    wbbr_reg[DATAW-1:0] <= wbbr_reg[DATAW-1:0];
+    wbbr_reg[DATAW-1:0] <= 64'b0;
   else if (sm_xx_update_dr_en && ir_xx_wbbr_reg_sel)
     wbbr_reg[DATAW-1:0] <= ir_xx_wdata[DATAW-1:0];
   else if (ddc_regs_update_wbbr)

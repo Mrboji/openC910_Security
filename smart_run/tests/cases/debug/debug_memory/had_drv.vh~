@@ -938,12 +938,12 @@ task wait_debug_mode_corea;
     //$display("---------------------------------------");
     //$display("wait COREA into debug mode......            |");
     //$display("<wait_begin> The hsr is: 0x%h       |",
-     //        hsr_data_out[15:0]);
+             hsr_data_out[15:0]);
   //  write_hadreg(`bsel,0);
     while(hsr_data_out[1:0]!=2'b10)
     read_hadreg_corea(`hsr,hsr_data_out);
     //$display("<wait_end>   The hsr is: 0x%h       |",
-    //         hsr_data_out[15:0]);
+             hsr_data_out[15:0]);
    // $display("Now, COREA is in Debug Mode!            |");
     //$display("---------------------------------------");
   end
